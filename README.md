@@ -1,37 +1,7 @@
-May 24 13:39:40 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 13:39:40 komlab run_server.sh[7042]: /usr/bin/python3: can't open file '/opt/retrack/app.py': [Errno 2] No such file or directory
-May 24 13:39:40 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
-May 24 13:39:40 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 13:39:43 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 103.
-May 24 13:39:43 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 13:39:43 komlab run_server.sh[7045]: /usr/bin/python3: can't open file '/opt/retrack/app.py': [Errno 2] No such file or directory
-May 24 13:39:43 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
-May 24 13:39:43 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 13:39:47 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 104.
-May 24 13:39:47 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 13:39:47 komlab run_server.sh[7048]: /usr/bin/python3: can't open file '/opt/retrack/app.py': [Errno 2] No such file or directory
-May 24 13:39:47 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
-May 24 13:39:47 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 13:39:50 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 105.
-May 24 13:39:50 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 13:39:50 komlab run_server.sh[7051]: /usr/bin/python3: can't open file '/opt/retrack/app.py': [Errno 2] No such file or directory
-May 24 13:39:50 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
-May 24 13:39:50 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 13:39:53 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 106.
-May 24 13:39:53 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 13:39:53 komlab run_server.sh[7054]: /usr/bin/python3: can't open file '/opt/retrack/app.py': [Errno 2] No such file or directory
-May 24 13:39:53 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
-May 24 13:39:53 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 13:39:56 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 107.
-namthanh5555@komlab:~/Downloads $ cat /opt/retrack/run_server.sh
-#!/usr/bin/env bash
-set -euo pipefail
-
-export RETRACK_RUNTIME=server
-export PORT="${PORT:-5000}"
-
-cd /opt/retrack
-/usr/bin/python3 app.py
-namthanh5555@komlab:~/Downloads $ cd /opt/retrack
-namthanh5555@komlab:/opt/retrack $ /opt/retrack/run_server.sh
-/usr/bin/python3: can't open file '/opt/retrack/app.py': [Errno 2] No such file or directory
+namthanh5555@komlab:~/Downloads $ ls -la /opt/retrack
+total 149672
+drwxr-xr-x 2 1001 1001      4096 May 24 13:31 .
+drwxr-xr-x 4 root root      4096 May 24 10:30 ..
+-rwxr-xr-x 1 1001 1001 153246520 May 24 11:58 ReTrack
+-rw-r--r-- 1 1001 1001       288 May 24 11:58 retrack-backend.service
+-rwxr-xr-x 1 1001 1001       138 May 24 13:32 run_server.sh
