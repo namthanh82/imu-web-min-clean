@@ -45,16 +45,14 @@ jobs:
           if [ "$VERSION" = "$GITHUB_REF_NAME" ]; then VERSION="0.0.0"; fi
           chmod +x dist/ReTrack
           mkdir -p package/DEBIAN package/opt/retrack package/usr/local/bin package/usr/share/applications
-
           cp dist/ReTrack package/opt/retrack/ReTrack
           cp run_server.sh package/opt/retrack/run_server.sh
-          chmod 755 package/opt/retrack/run_server.sh
-
           cp retrack-backend.service package/opt/retrack/retrack-backend.service
           cp postinst package/DEBIAN/postinst
+          chmod +x package/opt/retrack/run_server.sh
           chmod 755 package/DEBIAN/postinst
-
           ln -s /opt/retrack/ReTrack package/usr/local/bin/retrack
+
           cat > package/DEBIAN/control <<EOF
           Package: retrack
           Version: ${VERSION}
@@ -66,7 +64,9 @@ jobs:
           Description: ReTrack IMU rehabilitation tracking desktop app
            ReTrack records and analyzes IMU rehabilitation sessions in a desktop window.
           EOF
+
           sed -i 's/^          //' package/DEBIAN/control
+
           cat > package/usr/share/applications/retrack.desktop <<EOF
           [Desktop Entry]
           Type=Application
@@ -76,7 +76,9 @@ jobs:
           Terminal=false
           Categories=Science;MedicalSoftware;
           EOF
+
           sed -i 's/^          //' package/usr/share/applications/retrack.desktop
+
           dpkg-deb --build package ReTrack-Linux-arm64.deb
 
       - name: Upload artifact
