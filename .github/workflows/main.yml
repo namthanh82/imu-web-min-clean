@@ -10,8 +10,8 @@ permissions:
   contents: write
 
 jobs:
-  build-linux-amd64:
-    name: Build Linux amd64
+  build-linux-arm64:
+    name: Build Linux arm64
     runs-on: ubuntu-24.04-arm
 
     steps:
@@ -52,7 +52,7 @@ jobs:
           Version: ${VERSION}
           Section: science
           Priority: optional
-          Architecture: amd64
+          Architecture: arm64
           Maintainer: BIOTRACKERS <support@example.com>
           Depends: libgtk-3-0, libwebkit2gtk-4.1-0
           Description: ReTrack IMU rehabilitation tracking desktop app
@@ -69,16 +69,16 @@ jobs:
           Categories=Science;MedicalSoftware;
           EOF
           sed -i 's/^          //' package/usr/share/applications/retrack.desktop
-          dpkg-deb --build package ReTrack-Linux-amd64.deb
+          dpkg-deb --build package ReTrack-Linux-arm64.deb
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ReTrack-Linux-amd64
-          path: ReTrack-Linux-amd64.deb
+          name: ReTrack-Linux-arm64
+          path: ReTrack-Linux-arm64.deb
 
       - name: Attach to GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: ReTrack-Linux-amd64.deb
+          files: ReTrack-Linux-arm64.deb
