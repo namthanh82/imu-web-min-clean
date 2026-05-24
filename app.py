@@ -30,7 +30,7 @@ def env_path(name: str, default: str | None = None) -> Path | None:
     if not path.is_absolute():
         path = BASE_DIR / path
     return path
-=======
+
 def load_app_env():
     """Load secrets for Flask + /api/analyze. Matches chatbot.py: root .env and imurtrack_ai/.env."""
     load_dotenv(resource_path(".env"), override=False)
