@@ -1,50 +1,21 @@
-May 24 14:06:16 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 18.
-May 24 14:06:16 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:16 komlab run_server.sh[8772]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:16 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:16 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:19 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 19.
-May 24 14:06:19 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:19 komlab run_server.sh[8774]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:19 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:19 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:22 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 20.
-May 24 14:06:22 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:22 komlab run_server.sh[8776]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:22 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:22 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:25 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 21.
-May 24 14:06:25 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:25 komlab run_server.sh[8778]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:25 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:25 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:29 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 22.
-May 24 14:06:29 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:29 komlab run_server.sh[8780]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:29 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:29 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:32 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 23.
-May 24 14:06:32 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:32 komlab run_server.sh[8783]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:32 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:32 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:35 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 24.
-May 24 14:06:35 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:35 komlab run_server.sh[8785]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:35 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:35 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:38 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 25.
-May 24 14:06:38 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:38 komlab run_server.sh[8787]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:38 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:38 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:42 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 26.
-May 24 14:06:42 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:42 komlab run_server.sh[8789]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:42 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:42 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
-May 24 14:06:45 komlab systemd[1]: retrack-backend.service: Scheduled restart job, restart counter is at 27.
-May 24 14:06:45 komlab systemd[1]: Started retrack-backend.service - ReTrack Flask Backend.
-May 24 14:06:45 komlab run_server.sh[8792]: /opt/retrack/run_server.sh: line 7: cd: /home/namthanh5555/Downloads/imu-web-min-clean: No such file or directory
-May 24 14:06:45 komlab systemd[1]: retrack-backend.service: Main process exited, code=exited, status=1/FAILURE
-May 24 14:06:45 komlab systemd[1]: retrack-backend.service: Failed with result 'exit-code'.
+amthanh5555@komlab:~/Downloads $ cd /opt/retrack
+namthanh5555@komlab:/opt/retrack $ sudo systemctl start retrack-backend.servicez
+Failed to start retrack-backend.servicez.service: Unit retrack-backend.servicez.service not found.
+namthanh5555@komlab:/opt/retrack $ sudo systemctl start retrack-backend.service
+namthanh5555@komlab:/opt/retrack $ sudo systemctl status retrack-backend.service
+● retrack-backend.service - ReTrack Flask Backend
+     Loaded: loaded (/etc/systemd/system/retrack-backend.service; enabled; pres>
+     Active: activating (auto-restart) (Result: exit-code) since Sun 2026-05-24>
+ Invocation: 0a6e142a06b04fd58bda9ad377c78a54
+    Process: 14280 ExecStart=/opt/retrack/run_server.sh (code=exited, status=1/>
+   Main PID: 14280 (code=exited, status=1/FAILURE)
+        CPU: 9ms
+lines 1-7/7 (END)...skipping...
+● retrack-backend.service - ReTrack Flask Backend
+     Loaded: loaded (/etc/systemd/system/retrack-backend.service; enabled; preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Sun 2026-05-24 16:23:19 BST; 1s ago
+ Invocation: 0a6e142a06b04fd58bda9ad377c78a54
+    Process: 14280 ExecStart=/opt/retrack/run_server.sh (code=exited, status=1/FAILURE)
+   Main PID: 14280 (code=exited, status=1/FAILURE)
+        CPU: 9ms
+~
