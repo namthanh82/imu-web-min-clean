@@ -25,7 +25,7 @@ def env_path(name: str, default: str | None = None) -> Path | None:
     if not raw_value:
         return None
 
-<<<<<<< HEAD
+
     path = Path(raw_value)
     if not path.is_absolute():
         path = BASE_DIR / path
@@ -43,7 +43,7 @@ def load_app_env():
 
 
 load_app_env()
->>>>>>> 688002c (Fix chatbot/env loading for exe; PyInstaller spec (numpy, tiktoken, icon); update deps and assets.)
+
 
 webgiaodien.EMG_CHART_HTML = webgiaodien.EMG_CHART_HTML.replace(
     "const emg_env_raw = {{ (emg_env or []) | tojson }};\n\n/*",
