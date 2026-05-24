@@ -1,2 +1,2 @@
-namthanh5555@komlab:~/Downloads $ systemctl status retrack-backend.service
-Unit retrack-backend.service could not be found.
+namthanh5555@komlab:~/Downloads $ ls /opt/retrack
+ReTrack  retrack-backend.service  run_server.sh
