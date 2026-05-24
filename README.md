@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-export RETRACK_RUNTIME=server
-export PORT="${PORT:-5000}"
-
-cd /home/namthanh5555/Downloads/imu-web-min-clean
-source .venv/bin/activate
-python3 app.py
+sudo chmod +x /opt/retrack/run_server.sh
+sudo systemctl restart retrack-backend.service
+sudo systemctl status retrack-backend.service
