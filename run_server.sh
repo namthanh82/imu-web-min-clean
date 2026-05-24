@@ -4,4 +4,5 @@ set -euo pipefail
 export RETRACK_RUNTIME=server
 export PORT="${PORT:-5000}"
 
-python3 app.py
+cd /opt/retrack
+/usr/bin/python3 app.py
