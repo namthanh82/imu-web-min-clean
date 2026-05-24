@@ -1,16 +1,5 @@
-namthanh5555@komlab:~/Downloads $ sudo dpkg -i ReTrack-Linux-arm64.deb
-(Reading database ... 120832 files and directories currently installed.)
-Preparing to unpack ReTrack-Linux-arm64.deb ...
-Unpacking retrack (0.0.0) over (0.0.0) ...
-Setting up retrack (0.0.0) ...
-Processing triggers for gnome-menus (3.36.0-3) ...
-Processing triggers for mailcap (3.74) ...
-Processing triggers for desktop-file-utils (0.28-1) ...
-namthanh5555@komlab:~/Downloads $ sudo apt-get -f install
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-0 upgraded, 0 newly installed, 0 to remove and 369 not upgraded.
-namthanh5555@komlab:~/Downloads $ systemctl list-unit-files | grep retrack
-namthanh5555@komlab:~/Downloads $ systemctl status retrack-backend.service
-Unit retrack-backend.service could not be found.
+sudo cp retrack-backend.service /etc/systemd/system/retrack-backend.service
+sudo systemctl daemon-reload
+sudo systemctl enable retrack-backend.service
+sudo systemctl start retrack-backend.service
+sudo systemctl status retrack-backend.service
