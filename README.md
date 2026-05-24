@@ -1,4 +1,3 @@
-sudo systemctl stop retrack-backend.service
-sudo systemctl disable retrack-backend.service
-sudo rm -f /etc/systemd/system/retrack-backend.service
-sudo systemctl daemon-reload
+sudo chmod +x /opt/retrack/run_server.sh
+sudo systemctl restart retrack-backend.service
+sudo systemctl status retrack-backend.service
