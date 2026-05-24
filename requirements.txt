@@ -6,12 +6,9 @@ python-dotenv==1.0.1
 pyserial==3.5
 eventlet==0.36.1
 gunicorn==22.0.0
-
-
-# ── AI Chatbot (RAG) ─────────────────────────────────────
 openai
 langchain-community
 langchain-openai
 langchain-text-splitters
 pypdf
->>>>>>> 688002c (Fix chatbot/env loading for exe; PyInstaller spec (numpy, tiktoken, icon); update deps and assets.)
+
