@@ -1,6 +1,16 @@
-
-namthanh5555@komlab:~/Downloads $ pwd
-/home/namthanh5555/Downloads
-namthanh5555@komlab:~/Downloads $ ls
-control.tar.zst  debian-binary  ReTrack-Linux-arm64.deb
-data.tar.zst     imu-app-1.0.4  ReTrack-Linux-arm64.zip
+namthanh5555@komlab:~/Downloads $ sudo dpkg -i ReTrack-Linux-arm64.deb
+(Reading database ... 120832 files and directories currently installed.)
+Preparing to unpack ReTrack-Linux-arm64.deb ...
+Unpacking retrack (0.0.0) over (0.0.0) ...
+Setting up retrack (0.0.0) ...
+Processing triggers for gnome-menus (3.36.0-3) ...
+Processing triggers for mailcap (3.74) ...
+Processing triggers for desktop-file-utils (0.28-1) ...
+namthanh5555@komlab:~/Downloads $ sudo apt-get -f install
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 369 not upgraded.
+namthanh5555@komlab:~/Downloads $ systemctl list-unit-files | grep retrack
+namthanh5555@komlab:~/Downloads $ systemctl status retrack-backend.service
+Unit retrack-backend.service could not be found.
