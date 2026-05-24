@@ -12,7 +12,7 @@ permissions:
 jobs:
   build-linux-amd64:
     name: Build Linux amd64
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
 
     steps:
       - name: Check out repository
