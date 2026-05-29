@@ -1,21 +1,9 @@
-namthanh5555@komlab:~/Downloads $ sudo dos2unix /opt/retrack/run_server.sh
-dos2unix: converting file /opt/retrack/run_server.sh to Unix format...
-namthanh5555@komlab:~/Downloads $ sudo dos2unix /opt/retrack/postinst
-dos2unix: /opt/retrack/postinst: No such file or directory
-dos2unix: Skipping /opt/retrack/postinst, not a regular file.
-namthanh5555@komlab:~/Downloads $ sudo dos2unix postinst
-dos2unix: converting file postinst to Unix format...
-namthanh5555@komlab:~/Downloads $ sudo dpkg -i ReTrack-Linux-arm64.deb
-(Reading database ... 120834 files and directories currently installed.)
-Preparing to unpack ReTrack-Linux-arm64.deb ...
-Unpacking retrack (0.0.0) over (0.0.0) ...
-Setting up retrack (0.0.0) ...
-env: ‘bash\r’: No such file or directory
-env: use -[v]S to pass options in shebang lines
-dpkg: error processing package retrack (--install):
- installed retrack package post-installation script subprocess returned error exit status 127
-Processing triggers for gnome-menus (3.36.0-3) ...
-Processing triggers for mailcap (3.74) ...
-Processing triggers for desktop-file-utils (0.28-1) ...
-Errors were encountered while processing:
- retrack
+) (1.3.2)
+(.venv) namthanh5555@komlab:~/Downloads/imu-web-min-clean-main $ python3 app.py
+Traceback (most recent call last):
+  File "/home/namthanh5555/Downloads/imu-web-min-clean-main/app.py", line 7, in <module>
+    import database
+  File "/home/namthanh5555/Downloads/imu-web-min-clean-main/database.py", line 75
+    >>>>>>> 41a523b (Fix writable runtime data directory)
+             ^
+SyntaxError: invalid decimal literal
