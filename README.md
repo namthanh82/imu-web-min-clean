@@ -1,13 +1,15 @@
-(Reading database ... 120834 files and directories currently installed.)
-Preparing to unpack ReTrack-Linux-arm64.deb ...
-Unpacking retrack (0.0.0) over (0.0.0) ...
-Setting up retrack (0.0.0) ...
-env: ‘bash\r’: No such file or directory
-env: use -[v]S to pass options in shebang lines
-dpkg: error processing package retrack (--install):
- installed retrack package post-installation script subprocess returned error exit status 127
-Processing triggers for gnome-menus (3.36.0-3) ...
-Processing triggers for mailcap (3.74) ...
-Processing triggers for desktop-file-utils (0.28-1) ...
-Errors were encountered while processing:
- retrack
+#!/usr/bin/env bash
+set -e
+
+SERVICE_NAME="retrack-backend.service"
+SERVICE_SRC="/opt/retrack/$SERVICE_NAME"
+SERVICE_DST="/etc/systemd/system/$SERVICE_NAME"
+
+if [ -f "$SERVICE_SRC" ]; then
+    cp "$SERVICE_SRC" "$SERVICE_DST"
+    systemctl daemon-reload
+    systemctl enable "$SERVICE_NAME"
+    systemctl restart "$SERVICE_NAME"
+fi
+
+exit 0
