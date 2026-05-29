@@ -1,17 +1,11 @@
-import importlib.util
 import os
-import time
-import webbrowser
 from pathlib import Path
-from threading import Lock, Timer
 
 from dotenv import load_dotenv
-from flask import flash, jsonify, redirect, render_template_string, request, url_for
-from flask_login import current_user, login_required
+from flask import Flask, jsonify
 
 import database
 import webgiaodien
-
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
@@ -20,30 +14,24 @@ app = webgiaodien.app
 socketio = webgiaodien.socketio
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "CHANGE_ME")
 
-def env_path(name: str, default: str | None = None) -> Path | None:
-    raw_value = os.environ.get(name, default)
-    if not raw_value:
-        return None
+
+def _sync_runtime_paths() -> None:
+    """Keep runtime data local and predictable on Pi 5 / laptop."""
+    data_dir = Path(os.environ.get("IMU_WEB_DATA_DIR", str(BASE_DIR / "data")))
+    if not data_dir.is_absolute():
+        data_dir = BASE_DIR / data_dir
+    data_dir.mkdir(parents=True, exist_ok=True)
+    os.environ.setdefault("IMU_WEB_DATA_DIR", str(data_dir))
+
+    # Make the legacy webgiaodien module use the same runtime files.
+    webgiaodien.PATIENTS_FILE = str(data_dir / "sample.json")
+    webgiaodien.RECORD_FILE = str(data_dir / "records.json")
+    webgiaodien.VAS_FILE = str(data_dir / "vas.json")
+    webgiaodien.EXPORT_DIR = str(data_dir / "exports")
+    Path(webgiaodien.EXPORT_DIR).mkdir(parents=True, exist_ok=True)
 
 
-    path = Path(raw_value)
-    if not path.is_absolute():
-        path = BASE_DIR / path
-    return path
-
-def load_app_env():
-    """Load secrets for Flask + /api/analyze. Matches chatbot.py: root .env and imurtrack_ai/.env."""
-    load_dotenv(resource_path(".env"), override=False)
-    load_dotenv(resource_path(os.path.join("imurtrack_ai", ".env")), override=False)
-    # Allow OPENAI_API_KEY (etc.) in .env next to ReTrack.exe without rebuilding
-    if getattr(sys, "frozen", False):
-        exe_env = os.path.join(os.path.dirname(sys.executable), ".env")
-        if os.path.isfile(exe_env):
-            load_dotenv(exe_env, override=True)
-
-
-load_app_env()
-
+_sync_runtime_paths()
 
 webgiaodien.EMG_CHART_HTML = webgiaodien.EMG_CHART_HTML.replace(
     "const emg_env_raw = {{ (emg_env or []) | tojson }};\n\n/*",
