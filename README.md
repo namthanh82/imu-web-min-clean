@@ -1,15 +1,5 @@
-#!/usr/bin/env bash
-set -e
-
-SERVICE_NAME="retrack-backend.service"
-SERVICE_SRC="/opt/retrack/$SERVICE_NAME"
-SERVICE_DST="/etc/systemd/system/$SERVICE_NAME"
-
-if [ -f "$SERVICE_SRC" ]; then
-    cp "$SERVICE_SRC" "$SERVICE_DST"
-    systemctl daemon-reload
-    systemctl enable "$SERVICE_NAME"
-    systemctl restart "$SERVICE_NAME"
-fi
-
-exit 0
+namthanh5555@komlab:~/Downloads $ dos2unix postinst
+dos2unix: converting file postinst to Unix format...
+namthanh5555@komlab:~/Downloads $ dos2unix run_server.sh
+dos2unix: run_server.sh: No such file or directory
+dos2unix: Skipping run_server.sh, not a regular file.
